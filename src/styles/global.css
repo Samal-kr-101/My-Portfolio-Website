@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --bg: #05070f;
+  --card: rgba(255, 255, 255, 0.04);
+  --border: rgba(255, 255, 255, 0.08);
+  --text: #e5e7eb;
+  --muted: rgba(229, 231, 235, 0.7);
+  --primary: #7c3aed;
+  --secondary: #22d3ee;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, #111827, var(--bg));
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+/* premium container */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* section spacing */
+.section {
+  padding: 120px 0;
+}
+
+/* glass premium card */
+.glass {
+  background: var(--card);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(14px);
+  border-radius: 18px;
+  transition: 0.3s ease;
+}
+
+/* hover lift */
+.glass:hover {
+  transform: translateY(-6px);
+  border-color: rgba(124, 58, 237, 0.5);
+}
+
+/* headings */
+h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+/* subtle text */
+p {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}

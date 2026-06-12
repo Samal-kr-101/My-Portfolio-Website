@@ -1,0 +1,248 @@
+
+/* =========================
+   BASE
+========================= */
+
+.section {
+  padding: 90px 0;
+}
+
+#experience {
+  margin: -100px auto;
+}
+
+.container {
+  width: 92%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* #experience h2 {
+  text-align: center;
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  margin-bottom: 70px;
+
+  color: #ffffff;
+  letter-spacing: -0.03em;
+  font-weight: 600;
+} */
+
+/* =========================
+   MAIN CONTAINER (MORE SUBTLE GLASS)
+========================= */
+
+.timeline.glass {
+  position: relative;
+  padding: 55px;
+
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+
+  border-radius: 26px;
+
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.55);
+
+  overflow: hidden;
+}
+
+/* very subtle ambient light (more premium, less neon) */
+.timeline.glass::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: radial-gradient(
+    circle at 20% 10%,
+    rgba(124, 58, 237, 0.08),
+    transparent 60%
+  );
+
+  pointer-events: none;
+}
+
+/* =========================
+   TIMELINE LINE (CLEANER)
+========================= */
+
+.timeline.glass::after {
+  content: "";
+  position: absolute;
+
+  left: 26px;
+  top: 0;
+  bottom: 0;
+
+  width: 1px;
+
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* =========================
+   EXPERIENCE ITEM (BETTER SPACING)
+========================= */
+
+.item {
+  position: relative;
+
+  padding-left: 58px;
+  margin-bottom: 50px;
+
+  transition: transform 0.25s ease;
+}
+
+/* subtle hover only */
+.item:hover {
+  transform: translateX(4px);
+}
+
+/* =========================
+   DOT (MINIMAL PREMIUM STYLE)
+========================= */
+
+.item::before {
+  content: "";
+
+  position: absolute;
+  left: 22px;
+  top: 9px;
+
+  width: 9px;
+  height: 9px;
+
+  border-radius: 50%;
+
+  background: #22d3ee;
+
+  box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.12);
+}
+
+/* =========================
+   HEADER TYPOGRAPHY (STRONG IMPROVEMENT)
+========================= */
+
+.item-header {
+  margin-bottom: 14px;
+}
+
+.item-header h3 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  margin-bottom: 6px;
+}
+
+.company {
+  display: block;
+  font-size: 0.95rem;
+  color: #22d3ee;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.duration {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+/* =========================
+   BULLETS (MORE PREMIUM TEXT FEEL)
+========================= */
+
+.item ul {
+  margin-top: 12px;
+  padding-left: 18px;
+}
+
+.item ul li {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  margin-bottom: 10px;
+
+  transition: color 0.2s ease;
+}
+
+.item:hover ul li {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .timeline.glass {
+    padding: 30px;
+  }
+
+  .item {
+    padding-left: 45px;
+  }
+
+  .timeline.glass::after {
+    left: 18px;
+  }
+
+  .item-header h3 {
+    font-size: 1.15rem;
+  }
+}
+
+
+/* =========================
+   EXPERIENCE HEADER (LIKE SKILLS)
+========================= */
+
+#experience .section-header {
+  text-align: center;
+  margin-bottom: 60px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* pill tag */
+#experience .section-tag {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 8px 18px;
+
+  border-radius: 999px;
+
+  border: 1px solid rgba(124, 58, 237, 0.25);
+  background: rgba(124, 58, 237, 0.08);
+
+  color: #22d3ee;
+
+  font-size: 0.85rem;
+  font-weight: 500;
+
+  margin-bottom: 14px;
+}
+
+/* heading */
+#experience .section-header h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 650;
+
+  color: #ffffff;
+  letter-spacing: -0.03em;
+
+  margin: 0;
+}
+
+/* description */
+#experience .section-header p {
+  color: #a1a1aa;
+  max-width: 600px;
+
+  margin-top: 12px;
+  line-height: 1.6;
+}

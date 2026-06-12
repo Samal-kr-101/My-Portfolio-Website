@@ -1,0 +1,129 @@
+
+/* HEADER (same system as Skills/Experience) */
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+  
+}
+
+.section-tag {
+  display: inline-flex;
+  padding: 8px 18px;
+
+  border-radius: 999px;
+
+  border: 1px solid rgba(124, 58, 237, 0.25);
+  background: rgba(124, 58, 237, 0.08);
+
+  color: #22d3ee;
+
+  font-size: 0.85rem;
+  margin-bottom: 14px;
+}
+
+/* CARD */
+.education-card.glass {
+  padding: 40px;
+
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+
+  border-radius: 24px;
+
+  backdrop-filter: blur(18px);
+
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.45);
+}
+
+/* TITLE */
+.edu-item h3 {
+  font-size: 1.4rem;
+  color: #ffffff;
+  margin-bottom: 10px;
+  letter-spacing: -0.02em;
+}
+
+/* META ROW */
+.edu-meta {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  margin-bottom: 12px;
+}
+
+.college {
+  color: #22d3ee;
+  font-weight: 500;
+}
+
+.duration {
+  color: #a1a1aa;
+  font-size: 0.9rem;
+}
+
+/* DESCRIPTION */
+.desc {
+  color: #cbd5e1;
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+
+/* SKILL TAGS */
+.focus {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.focus span {
+  padding: 6px 12px;
+
+  font-size: 0.85rem;
+
+  border-radius: 999px;
+
+  background: rgba(124, 58, 237, 0.08);
+  border: 1px solid rgba(124, 58, 237, 0.2);
+
+  color: #cbd5e1;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .education-card.glass {
+    padding: 25px;
+  }
+
+  .edu-meta {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+#education{
+    margin: -130px auto;
+}
+
+.focus span {
+  transition: all 0.3s ease;
+}
+
+.focus span:hover {
+  transform: translateY(-2px);
+
+  border-color: rgba(124, 58, 237, 0.4);
+
+  background: rgba(124, 58, 237, 0.12);
+
+  color: #ffffff;
+}
+
+
+.education-card:hover{
+    transform: translateY(-5px);
+
+  border-color: rgba(124, 58, 237, 0.4);
+
+  /* background: rgba(124, 58, 237, 0.12); */
+}
